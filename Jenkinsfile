@@ -42,7 +42,7 @@ stage('upload to atifactory') {
 }
    post {
       failure {
-            emailext attachLog: true, body: 'Deployment has failed', subject: 'calculator-munit-mule3 Deployment Status', to: 'devops@eaiesb.com'
+            emailext attachLog: true, body: 'Deployment has failed', subject: 'calculator-munit-mule4 Deployment Status', to: 'devops@eaiesb.com'
            slackSend (color: "#FF0000",message: 'Calculator-munit-mule4 Deployment Failed')
         }
       success {
